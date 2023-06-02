@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "segcontrol_sel-uns.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
