@@ -24,6 +24,12 @@ open class OMKSegmentedControl: UIControl {
         }
     }
 
+    @IBInspectable open var spacing: CGFloat = 2.0 {
+        didSet {
+            updateViews()
+        }
+    }
+    
     /**
      The foreground color of the segment.
      */
@@ -138,17 +144,22 @@ open class OMKSegmentedControl: UIControl {
     
     open func appendIconSegment(icon: UIImage? = nil, preserveIconColor: Bool = true, rippleColor: UIColor) {
         self.preserveIconColor = preserveIconColor
-//        let button = MaterialButton(icon: icon, textColor: nil, bgColor: rippleColor, cornerRadius: self.cornerRadius)
-//        button.rippleLayerAlpha = 0.15
-//        self.segments.append(button)
+        let button = UIButton()
+        button.setImage(icon)
+        button.setTitle(nil, for: .normal)
+        button.layer.cornerRadius = self.cornerRadius
+        self.segments.append(button)
     }
     
     open func appendSegment(icon: UIImage? = nil, text: String? = nil,
                             textColor: UIColor?, font: UIFont? = nil, rippleColor: UIColor)
     {
-//        let button = MaterialButton(icon: icon, text: text, textColor: textColor, bgColor: rippleColor, cornerRadius: self.cornerRadius)
-//        button.rippleLayerAlpha = 0.15
-//        self.segments.append(button)
+        let button = UIButton()
+        button.setImage(icon)
+        button.setTitle(text, for: .normal)
+        button.setTitleColor(textColor, for: .normal)
+        button.layer.cornerRadius = self.cornerRadius
+        self.segments.append(button)
     }
     
     open func appendTextSegment(text: String, textColor: UIColor?, font: UIFont? = nil,
@@ -172,7 +183,7 @@ open class OMKSegmentedControl: UIControl {
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
         stackView.spacing = 10
-        stackView.layoutMargins = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 4)
+        stackView.layoutMargins = UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: spacing)
         stackView.isLayoutMarginsRelativeArrangement = true
         
         selector = SelectorView(frame: .zero)
@@ -206,10 +217,10 @@ open class OMKSegmentedControl: UIControl {
     override open func layoutSubviews() {
         super.layoutSubviews()
         
-        selector.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4).isActive = true
+        selector.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -spacing).isActive = true
         switch selectorStyle {
         case .fill, .outline:
-            selector.topAnchor.constraint(equalTo: topAnchor, constant: 4).isActive = true
+            selector.topAnchor.constraint(equalTo: topAnchor, constant: spacing).isActive = true
         case .line:
             selector.heightAnchor.constraint(equalToConstant: 3.0).isActive = true
         }

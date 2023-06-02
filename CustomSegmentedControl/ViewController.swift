@@ -8,24 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-//    let segmentedControl = CustomSegmentedControl(items: ["", ""])
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Note: you may need to set the layout contraints for it by yourself
-        // to make it displayed correctly.
         let segmentedControl = OMKSegmentedControl(frame: CGRect(x: 12, y: 100, width: UIScreen.main.bounds.width - 24, height: 32))
-        
-        // Configure the view, note that you need to call updateViews in order to apply your cofiguration.
         segmentedControl.selectorColor = .black
         segmentedControl.selectorStyle = .fill
-//        segmentedControl.selectorTextColor = .black
+        segmentedControl.spacing = 2
         setSampleSegments(segmentedControl, 18.0)
         segmentedControl.updateViews()
         
         self.view.addSubview(segmentedControl)
-//        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
     }
     
@@ -37,7 +30,6 @@ class ViewController: UIViewController {
     private func setSampleSegments(_ segmentedControl: OMKSegmentedControl, _ cornerRadius: CGFloat) {
         for i in 0..<3 {
             // Button background needs to be clear, it will be set to clear in segmented control anyway.
-//            let button = MaterialButton(text: "Segment \(i)", textColor: .gray, bgColor: .clear, cornerRadius: cornerRadius)
             let button = UIButton()
             button.setTitle("Segment \(i)", for: .normal)
             button.setTitleColor(.gray, for: .normal)
