@@ -1,12 +1,3 @@
-//
-//  MaterialSegmentedControl.swift
-//  MaterialDesignWidgets
-//
-//  Created by Michael Ho on 04/27/19.
-//  Updated by Michael Ho on 05/27/20.
-//  Copyright © 2019 Michael Ho. All rights reserved.
-//
-
 import UIKit
 
 @IBDesignable
