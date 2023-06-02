@@ -36,15 +36,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C4A8B6BE2A0971370046FD6C /* ThemeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThemeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4A8B6BE2A0971370046FD6C /* CustomSegmentedControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomSegmentedControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A8B6C12A0971370046FD6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4A8B6C52A0971370046FD6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C4A8B6CA2A0971390046FD6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4A8B6CD2A0971390046FD6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4A8B6CF2A0971390046FD6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4A8B6D42A09713A0046FD6C /* ThemeExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThemeExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4A8B6D42A09713A0046FD6C /* CustomSegmentedControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomSegmentedControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A8B6D82A09713A0046FD6C /* ThemeExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeExampleTests.swift; sourceTree = "<group>"; };
-		C4A8B6DE2A09713A0046FD6C /* ThemeExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThemeExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4A8B6DE2A09713A0046FD6C /* CustomSegmentedControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomSegmentedControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A8B6E22A09713A0046FD6C /* ThemeExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeExampleUITests.swift; sourceTree = "<group>"; };
 		C4A8B6E42A09713A0046FD6C /* ThemeExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C4CBBC8E2A2A26E000FB9E9D /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
@@ -79,9 +79,9 @@
 		C4A8B6B52A0971370046FD6C = {
 			isa = PBXGroup;
 			children = (
-				C4A8B6C02A0971370046FD6C /* ThemeExample */,
-				C4A8B6D72A09713A0046FD6C /* ThemeExampleTests */,
-				C4A8B6E12A09713A0046FD6C /* ThemeExampleUITests */,
+				C4A8B6C02A0971370046FD6C /* CustomSegmentedControl */,
+				C4A8B6D72A09713A0046FD6C /* CustomSegmentedControlTests */,
+				C4A8B6E12A09713A0046FD6C /* CustomSegmentedControlUITests */,
 				C4A8B6BF2A0971370046FD6C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,14 +89,14 @@
 		C4A8B6BF2A0971370046FD6C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C4A8B6BE2A0971370046FD6C /* ThemeExample.app */,
-				C4A8B6D42A09713A0046FD6C /* ThemeExampleTests.xctest */,
-				C4A8B6DE2A09713A0046FD6C /* ThemeExampleUITests.xctest */,
+				C4A8B6BE2A0971370046FD6C /* CustomSegmentedControl.app */,
+				C4A8B6D42A09713A0046FD6C /* CustomSegmentedControlTests.xctest */,
+				C4A8B6DE2A09713A0046FD6C /* CustomSegmentedControlUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C4A8B6C02A0971370046FD6C /* ThemeExample */ = {
+		C4A8B6C02A0971370046FD6C /* CustomSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
 				C4A8B6C12A0971370046FD6C /* AppDelegate.swift */,
@@ -107,32 +107,32 @@
 				C4A8B6CC2A0971390046FD6C /* LaunchScreen.storyboard */,
 				C4A8B6CF2A0971390046FD6C /* Info.plist */,
 			);
-			path = ThemeExample;
+			path = CustomSegmentedControl;
 			sourceTree = "<group>";
 		};
-		C4A8B6D72A09713A0046FD6C /* ThemeExampleTests */ = {
+		C4A8B6D72A09713A0046FD6C /* CustomSegmentedControlTests */ = {
 			isa = PBXGroup;
 			children = (
 				C4A8B6D82A09713A0046FD6C /* ThemeExampleTests.swift */,
 			);
-			path = ThemeExampleTests;
+			path = CustomSegmentedControlTests;
 			sourceTree = "<group>";
 		};
-		C4A8B6E12A09713A0046FD6C /* ThemeExampleUITests */ = {
+		C4A8B6E12A09713A0046FD6C /* CustomSegmentedControlUITests */ = {
 			isa = PBXGroup;
 			children = (
 				C4A8B6E22A09713A0046FD6C /* ThemeExampleUITests.swift */,
 				C4A8B6E42A09713A0046FD6C /* ThemeExampleUITestsLaunchTests.swift */,
 			);
-			path = ThemeExampleUITests;
+			path = CustomSegmentedControlUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C4A8B6BD2A0971370046FD6C /* ThemeExample */ = {
+		C4A8B6BD2A0971370046FD6C /* CustomSegmentedControl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C4A8B6E82A09713A0046FD6C /* Build configuration list for PBXNativeTarget "ThemeExample" */;
+			buildConfigurationList = C4A8B6E82A09713A0046FD6C /* Build configuration list for PBXNativeTarget "CustomSegmentedControl" */;
 			buildPhases = (
 				C4A8B6BA2A0971370046FD6C /* Sources */,
 				C4A8B6BB2A0971370046FD6C /* Frameworks */,
@@ -142,14 +142,14 @@
 			);
 			dependencies = (
 			);
-			name = ThemeExample;
+			name = CustomSegmentedControl;
 			productName = ThemeExample;
-			productReference = C4A8B6BE2A0971370046FD6C /* ThemeExample.app */;
+			productReference = C4A8B6BE2A0971370046FD6C /* CustomSegmentedControl.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C4A8B6D32A09713A0046FD6C /* ThemeExampleTests */ = {
+		C4A8B6D32A09713A0046FD6C /* CustomSegmentedControlTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C4A8B6EB2A09713A0046FD6C /* Build configuration list for PBXNativeTarget "ThemeExampleTests" */;
+			buildConfigurationList = C4A8B6EB2A09713A0046FD6C /* Build configuration list for PBXNativeTarget "CustomSegmentedControlTests" */;
 			buildPhases = (
 				C4A8B6D02A09713A0046FD6C /* Sources */,
 				C4A8B6D12A09713A0046FD6C /* Frameworks */,
@@ -160,14 +160,14 @@
 			dependencies = (
 				C4A8B6D62A09713A0046FD6C /* PBXTargetDependency */,
 			);
-			name = ThemeExampleTests;
+			name = CustomSegmentedControlTests;
 			productName = ThemeExampleTests;
-			productReference = C4A8B6D42A09713A0046FD6C /* ThemeExampleTests.xctest */;
+			productReference = C4A8B6D42A09713A0046FD6C /* CustomSegmentedControlTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C4A8B6DD2A09713A0046FD6C /* ThemeExampleUITests */ = {
+		C4A8B6DD2A09713A0046FD6C /* CustomSegmentedControlUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C4A8B6EE2A09713A0046FD6C /* Build configuration list for PBXNativeTarget "ThemeExampleUITests" */;
+			buildConfigurationList = C4A8B6EE2A09713A0046FD6C /* Build configuration list for PBXNativeTarget "CustomSegmentedControlUITests" */;
 			buildPhases = (
 				C4A8B6DA2A09713A0046FD6C /* Sources */,
 				C4A8B6DB2A09713A0046FD6C /* Frameworks */,
@@ -178,9 +178,9 @@
 			dependencies = (
 				C4A8B6E02A09713A0046FD6C /* PBXTargetDependency */,
 			);
-			name = ThemeExampleUITests;
+			name = CustomSegmentedControlUITests;
 			productName = ThemeExampleUITests;
-			productReference = C4A8B6DE2A09713A0046FD6C /* ThemeExampleUITests.xctest */;
+			productReference = C4A8B6DE2A09713A0046FD6C /* CustomSegmentedControlUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +206,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C4A8B6B92A0971370046FD6C /* Build configuration list for PBXProject "ThemeExample" */;
+			buildConfigurationList = C4A8B6B92A0971370046FD6C /* Build configuration list for PBXProject "CustomSegmentedControl" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,9 +219,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C4A8B6BD2A0971370046FD6C /* ThemeExample */,
-				C4A8B6D32A09713A0046FD6C /* ThemeExampleTests */,
-				C4A8B6DD2A09713A0046FD6C /* ThemeExampleUITests */,
+				C4A8B6BD2A0971370046FD6C /* CustomSegmentedControl */,
+				C4A8B6D32A09713A0046FD6C /* CustomSegmentedControlTests */,
+				C4A8B6DD2A09713A0046FD6C /* CustomSegmentedControlUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -286,12 +286,12 @@
 /* Begin PBXTargetDependency section */
 		C4A8B6D62A09713A0046FD6C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C4A8B6BD2A0971370046FD6C /* ThemeExample */;
+			target = C4A8B6BD2A0971370046FD6C /* CustomSegmentedControl */;
 			targetProxy = C4A8B6D52A09713A0046FD6C /* PBXContainerItemProxy */;
 		};
 		C4A8B6E02A09713A0046FD6C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C4A8B6BD2A0971370046FD6C /* ThemeExample */;
+			target = C4A8B6BD2A0971370046FD6C /* CustomSegmentedControl */;
 			targetProxy = C4A8B6DF2A09713A0046FD6C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -492,7 +492,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThemeExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ThemeExample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomSegmentedControl.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CustomSegmentedControl";
 			};
 			name = Debug;
 		};
@@ -512,7 +512,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThemeExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ThemeExample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomSegmentedControl.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CustomSegmentedControl";
 			};
 			name = Release;
 		};
@@ -555,7 +555,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C4A8B6B92A0971370046FD6C /* Build configuration list for PBXProject "ThemeExample" */ = {
+		C4A8B6B92A0971370046FD6C /* Build configuration list for PBXProject "CustomSegmentedControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C4A8B6E62A09713A0046FD6C /* Debug */,
@@ -564,7 +564,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C4A8B6E82A09713A0046FD6C /* Build configuration list for PBXNativeTarget "ThemeExample" */ = {
+		C4A8B6E82A09713A0046FD6C /* Build configuration list for PBXNativeTarget "CustomSegmentedControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C4A8B6E92A09713A0046FD6C /* Debug */,
@@ -573,7 +573,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C4A8B6EB2A09713A0046FD6C /* Build configuration list for PBXNativeTarget "ThemeExampleTests" */ = {
+		C4A8B6EB2A09713A0046FD6C /* Build configuration list for PBXNativeTarget "CustomSegmentedControlTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C4A8B6EC2A09713A0046FD6C /* Debug */,
@@ -582,7 +582,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C4A8B6EE2A09713A0046FD6C /* Build configuration list for PBXNativeTarget "ThemeExampleUITests" */ = {
+		C4A8B6EE2A09713A0046FD6C /* Build configuration list for PBXNativeTarget "CustomSegmentedControlUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C4A8B6EF2A09713A0046FD6C /* Debug */,
