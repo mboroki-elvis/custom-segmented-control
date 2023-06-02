@@ -39,15 +39,6 @@ open class OMKSegmentedControl: UIControl {
         }
     }
 
-    /**
-     The boolean to set whether the segment control displays the original color of the icon.
-     */
-    @IBInspectable public var preserveIconColor: Bool = false {
-        didSet {
-            updateViews()
-        }
-    }
-
     public enum SelectorStyle {
         case fill
         case outline
@@ -96,9 +87,15 @@ open class OMKSegmentedControl: UIControl {
      - Parameter selectorColor:   The color of the selector.
      - Parameter bgColor:         Background color.
      */
-    public convenience init(segments: [UIButton] = [], selectorStyle: SelectorStyle = .line, cornerRadius: CGFloat,
-                            fgColor: UIColor, selectedFgColor: UIColor, selectorColor: UIColor, bgColor: UIColor)
-    {
+    public convenience init(
+        segments: [UIButton] = [],
+        selectorStyle: SelectorStyle = .line,
+        cornerRadius: CGFloat,
+        fgColor: UIColor,
+        selectedFgColor: UIColor,
+        selectorColor: UIColor,
+        bgColor: UIColor
+    ) {
         self.init(frame: .zero)
         
         self.segments = segments
@@ -111,61 +108,26 @@ open class OMKSegmentedControl: UIControl {
             self.cornerRadius = cornerRadius
         }
     }
-
-    /**
-     Convenience init of material design segmentedControl using system default colors. This initializer
-     reflects dark mode colors on iOS 13 or later platforms. However, it will ignore any custom colors
-     set to the segmentedControl.
-     
-     - Parameter segments:      The segment in UIButton form.
-     - Parameter selectorStyle: The style of the selector, fill, outline and line are supported.
-     - Parameter cornerRadius:  The corner radius of the segmented control. Used to crop rounded corner.
-     */
-    @available(iOS 13.0, *)
-    public convenience init(segments: [UIButton] = [], selectorStyle: SelectorStyle = .line, cornerRadius: CGFloat) {
-        self.init(frame: .zero)
-        
-        self.segments = segments
-        self.selectorStyle = selectorStyle
-        self.foregroundColor = .label
-        self.selectedForegroundColor = .label
-        switch selectorStyle {
-        case .fill:
-            self.selectorColor = .systemGray3
-            self.backgroundColor = .systemFill
-        default:
-            self.selectorColor = .label
-            self.backgroundColor = .systemBackground
-        }
-        defer {
-            self.cornerRadius = cornerRadius
-        }
-    }
     
-    open func appendIconSegment(icon: UIImage? = nil, preserveIconColor: Bool = true, rippleColor: UIColor) {
-        self.preserveIconColor = preserveIconColor
+    open func appendIconSegment(icon: UIImage? = nil) {
         let button = UIButton()
         button.setImage(icon)
         button.setTitle(nil, for: .normal)
-        button.layer.cornerRadius = self.cornerRadius
-        self.segments.append(button)
+        button.layer.cornerRadius = cornerRadius
+        segments.append(button)
     }
     
-    open func appendSegment(icon: UIImage? = nil, text: String? = nil,
-                            textColor: UIColor?, font: UIFont? = nil, rippleColor: UIColor)
-    {
+    open func appendSegment(icon: UIImage? = nil, text: String? = nil, textColor: UIColor?, font: UIFont? = nil) {
         let button = UIButton()
         button.setImage(icon)
         button.setTitle(text, for: .normal)
         button.setTitleColor(textColor, for: .normal)
-        button.layer.cornerRadius = self.cornerRadius
-        self.segments.append(button)
+        button.layer.cornerRadius = cornerRadius
+        segments.append(button)
     }
     
-    open func appendTextSegment(text: String, textColor: UIColor?, font: UIFont? = nil,
-                                rippleColor: UIColor)
-    {
-        appendSegment(text: text, textColor: textColor, font: font, rippleColor: rippleColor)
+    open func appendTextSegment(text: String, textColor: UIColor?, font: UIFont? = nil) {
+        appendSegment(text: text, textColor: textColor, font: font)
     }
     
     func updateViews() {
@@ -190,8 +152,13 @@ open class OMKSegmentedControl: UIControl {
         selector.setCornerBorder(cornerRadius: 7)
         
         switch selectorStyle {
-        case .fill, .line:
-            selector.backgroundColor = .green
+        case .line:
+            selector.backgroundColor = selectorColor
+        case .fill:
+            stackView.layer.borderColor = UIColor.hex(hex: "#DCDDDE").cgColor // TODO: check type
+            stackView.layer.borderWidth = 1
+            stackView.layer.cornerRadius = cornerRadius
+            selector.addShadow()
         case .outline:
             selector.setCornerBorder(color: selectorColor, cornerRadius: selector.layer.cornerRadius, borderWidth: 1.5)
         }
@@ -226,7 +193,6 @@ open class OMKSegmentedControl: UIControl {
         }
         
         if let selector = selector, let first = stackView.arrangedSubviews.first {
-            // TODO check type
             addConstraint(NSLayoutConstraint(item: selector, attribute: .width, relatedBy: .equal, toItem: first, attribute: .width, multiplier: 1, constant: 0.0))
         }
         
@@ -234,10 +200,6 @@ open class OMKSegmentedControl: UIControl {
         stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         stackView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         stackView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        stackView.layer.borderColor = UIColor.hex(hex: "#DCDDDE").cgColor // TODO check type
-        stackView.layer.borderWidth = 1
-        stackView.layer.cornerRadius = cornerRadius
-        selector.addShadow()
         layoutIfNeeded()
     }
     
@@ -245,11 +207,11 @@ open class OMKSegmentedControl: UIControl {
         for (idx, btn) in segments.enumerated() {
             let image = btn.image(for: .normal)
             btn.setTitleColor(foregroundColor, for: .normal)
-            btn.setImage(preserveIconColor ? image : image?.colored(foregroundColor))
+            btn.setImage(image?.colored(foregroundColor))
             
             if btn.tag == button.tag {
                 selectedSegmentIndex = idx
-                btn.setImage(preserveIconColor ? image : image?.colored(selectedForegroundColor))
+                btn.setImage(image?.colored(selectedForegroundColor))
                 btn.setTitleColor(selectorStyle == .line ? foregroundColor : selectedForegroundColor, for: .normal)
                 moveView(selector, toX: btn.frame.origin.x)
             }
