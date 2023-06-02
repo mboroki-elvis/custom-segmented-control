@@ -15,7 +15,9 @@
 		C4A8B6E32A09713A0046FD6C /* ThemeExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A8B6E22A09713A0046FD6C /* ThemeExampleUITests.swift */; };
 		C4A8B6E52A09713A0046FD6C /* ThemeExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A8B6E42A09713A0046FD6C /* ThemeExampleUITestsLaunchTests.swift */; };
 		C4CBBC8F2A2A26E000FB9E9D /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CBBC8E2A2A26E000FB9E9D /* SegmentedControl.swift */; };
-		C4CBBC912A2A31B700FB9E9D /* SomeGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CBBC902A2A31B700FB9E9D /* SomeGradient.swift */; };
+		C4CBBC912A2A31B700FB9E9D /* SelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CBBC902A2A31B700FB9E9D /* SelectorView.swift */; };
+		C4CBBC932A2A3EDC00FB9E9D /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CBBC922A2A3EDC00FB9E9D /* UIButton+Extensions.swift */; };
+		C4CBBC962A2A3FAD00FB9E9D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CBBC952A2A3FAD00FB9E9D /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +50,9 @@
 		C4A8B6E22A09713A0046FD6C /* ThemeExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeExampleUITests.swift; sourceTree = "<group>"; };
 		C4A8B6E42A09713A0046FD6C /* ThemeExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C4CBBC8E2A2A26E000FB9E9D /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
-		C4CBBC902A2A31B700FB9E9D /* SomeGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeGradient.swift; sourceTree = "<group>"; };
+		C4CBBC902A2A31B700FB9E9D /* SelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorView.swift; sourceTree = "<group>"; };
+		C4CBBC922A2A3EDC00FB9E9D /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		C4CBBC952A2A3FAD00FB9E9D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +106,8 @@
 				C4A8B6C12A0971370046FD6C /* AppDelegate.swift */,
 				C4A8B6C52A0971370046FD6C /* ViewController.swift */,
 				C4CBBC8E2A2A26E000FB9E9D /* SegmentedControl.swift */,
-				C4CBBC902A2A31B700FB9E9D /* SomeGradient.swift */,
+				C4CBBC942A2A3EF100FB9E9D /* Extensions */,
+				C4CBBC902A2A31B700FB9E9D /* SelectorView.swift */,
 				C4A8B6CA2A0971390046FD6C /* Assets.xcassets */,
 				C4A8B6CC2A0971390046FD6C /* LaunchScreen.storyboard */,
 				C4A8B6CF2A0971390046FD6C /* Info.plist */,
@@ -125,6 +130,15 @@
 				C4A8B6E42A09713A0046FD6C /* ThemeExampleUITestsLaunchTests.swift */,
 			);
 			path = CustomSegmentedControlUITests;
+			sourceTree = "<group>";
+		};
+		C4CBBC942A2A3EF100FB9E9D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C4CBBC922A2A3EDC00FB9E9D /* UIButton+Extensions.swift */,
+				C4CBBC952A2A3FAD00FB9E9D /* UIView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,10 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4CBBC962A2A3FAD00FB9E9D /* UIView+Extension.swift in Sources */,
 				C4A8B6C62A0971370046FD6C /* ViewController.swift in Sources */,
 				C4CBBC8F2A2A26E000FB9E9D /* SegmentedControl.swift in Sources */,
 				C4A8B6C22A0971370046FD6C /* AppDelegate.swift in Sources */,
-				C4CBBC912A2A31B700FB9E9D /* SomeGradient.swift in Sources */,
+				C4CBBC932A2A3EDC00FB9E9D /* UIButton+Extensions.swift in Sources */,
+				C4CBBC912A2A31B700FB9E9D /* SelectorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         segmentedControl.selectorColor = .black
         segmentedControl.selectorStyle = .fill
         segmentedControl.spacing = 2
+        segmentedControl.cornerRadius = 8
         setSampleSegments(segmentedControl, 18.0)
         segmentedControl.updateViews()
         

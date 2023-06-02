@@ -187,7 +187,7 @@ open class OMKSegmentedControl: UIControl {
         stackView.isLayoutMarginsRelativeArrangement = true
         
         selector = SelectorView(frame: .zero)
-        selector.setCornerBorder(cornerRadius: 4)
+        selector.setCornerBorder(cornerRadius: 7)
         
         switch selectorStyle {
         case .fill, .line:
@@ -234,10 +234,10 @@ open class OMKSegmentedControl: UIControl {
         stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         stackView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         stackView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        stackView.layer.borderColor = UIColor.black.withAlphaComponent(0.6).cgColor // TODO check type
+        stackView.layer.borderColor = UIColor.hex(hex: "#DCDDDE").cgColor // TODO check type
         stackView.layer.borderWidth = 1
-        stackView.layer.cornerRadius = 8
-        
+        stackView.layer.cornerRadius = cornerRadius
+        selector.addShadow()
         layoutIfNeeded()
     }
     
@@ -275,23 +275,6 @@ open class OMKSegmentedControl: UIControl {
                        animations: { () in
                            view.transform = CGAffineTransform(translationX: toX, y: 0.0)
                        }, completion: completion)
-    }
-}
-
-public extension UIView {
-    func setCornerBorder(color: UIColor? = nil, cornerRadius: CGFloat = 8.0, borderWidth: CGFloat = 1.5) {
-        layer.borderColor = color != nil ? color!.cgColor : UIColor.clear.cgColor
-        layer.borderWidth = borderWidth
-        layer.cornerRadius = cornerRadius
-        clipsToBounds = true
-    }
-}
-
-public extension UIButton {
-    func setImage(_ image: UIImage?) {
-        for state: UIControl.State in [.normal, .highlighted, .disabled, .selected, .focused, .application, .reserved] {
-            setImage(image, for: state)
-        }
     }
 }
 
