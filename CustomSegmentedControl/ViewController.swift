@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         let segmentedControl = OMKSegmentedControl(frame: CGRect(x: 12, y: 100, width: UIScreen.main.bounds.width - 24, height: 32))
         segmentedControl.selectorColor = .black
         segmentedControl.selectorStyle = .fill
+        segmentedControl.foregroundColor = .hex(hex: "#1E1E1E")
         segmentedControl.spacing = 2
         segmentedControl.cornerRadius = 8
         setSampleSegments(segmentedControl, 18.0)
@@ -29,10 +30,10 @@ class ViewController: UIViewController {
     - Parameter cornerRadius:     The corner radius to be set to segments and selectors.
     */
     private func setSampleSegments(_ segmentedControl: OMKSegmentedControl, _ cornerRadius: CGFloat) {
-        for i in 0..<3 {
+        for i in 0..<2 {
             // Button background needs to be clear, it will be set to clear in segmented control anyway.
             let button = UIButton()
-            button.setTitle("Segment \(i)", for: .normal)
+            button.setTitle(i == 0 ? "I WANT TO" : "I NEED", for: .normal)
             button.setTitleColor(.gray, for: .normal)
             button.backgroundColor = .clear
             button.layer.cornerRadius = cornerRadius

@@ -18,6 +18,7 @@
 		C4CBBC912A2A31B700FB9E9D /* SelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CBBC902A2A31B700FB9E9D /* SelectorView.swift */; };
 		C4CBBC932A2A3EDC00FB9E9D /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CBBC922A2A3EDC00FB9E9D /* UIButton+Extensions.swift */; };
 		C4CBBC962A2A3FAD00FB9E9D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CBBC952A2A3FAD00FB9E9D /* UIView+Extension.swift */; };
+		C4CBBC982A2A431400FB9E9D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CBBC972A2A431400FB9E9D /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		C4CBBC902A2A31B700FB9E9D /* SelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorView.swift; sourceTree = "<group>"; };
 		C4CBBC922A2A3EDC00FB9E9D /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		C4CBBC952A2A3FAD00FB9E9D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C4CBBC972A2A431400FB9E9D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +107,8 @@
 			children = (
 				C4A8B6C12A0971370046FD6C /* AppDelegate.swift */,
 				C4A8B6C52A0971370046FD6C /* ViewController.swift */,
-				C4CBBC8E2A2A26E000FB9E9D /* SegmentedControl.swift */,
+				C4CBBC992A2A435600FB9E9D /* Views */,
 				C4CBBC942A2A3EF100FB9E9D /* Extensions */,
-				C4CBBC902A2A31B700FB9E9D /* SelectorView.swift */,
 				C4A8B6CA2A0971390046FD6C /* Assets.xcassets */,
 				C4A8B6CC2A0971390046FD6C /* LaunchScreen.storyboard */,
 				C4A8B6CF2A0971390046FD6C /* Info.plist */,
@@ -136,9 +137,19 @@
 			isa = PBXGroup;
 			children = (
 				C4CBBC922A2A3EDC00FB9E9D /* UIButton+Extensions.swift */,
+				C4CBBC972A2A431400FB9E9D /* UIColor+Extension.swift */,
 				C4CBBC952A2A3FAD00FB9E9D /* UIView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C4CBBC992A2A435600FB9E9D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C4CBBC8E2A2A26E000FB9E9D /* SegmentedControl.swift */,
+				C4CBBC902A2A31B700FB9E9D /* SelectorView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4CBBC982A2A431400FB9E9D /* UIColor+Extension.swift in Sources */,
 				C4CBBC962A2A3FAD00FB9E9D /* UIView+Extension.swift in Sources */,
 				C4A8B6C62A0971370046FD6C /* ViewController.swift in Sources */,
 				C4CBBC8F2A2A26E000FB9E9D /* SegmentedControl.swift in Sources */,

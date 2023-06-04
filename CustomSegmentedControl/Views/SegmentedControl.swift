@@ -155,7 +155,7 @@ open class OMKSegmentedControl: UIControl {
         case .line:
             selector.backgroundColor = selectorColor
         case .fill:
-            stackView.layer.borderColor = UIColor.hex(hex: "#DCDDDE").cgColor // TODO: check type
+            stackView.layer.borderColor = UIColor.hex(hex: "#DCDDDE").cgColor
             stackView.layer.borderWidth = 1
             stackView.layer.cornerRadius = cornerRadius
             selector.addShadow()
