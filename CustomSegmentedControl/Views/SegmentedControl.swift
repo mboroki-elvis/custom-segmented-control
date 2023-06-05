@@ -1,7 +1,7 @@
 import UIKit
 
 @IBDesignable
-open class OMKSegmentedControl: UIControl {
+open class SegmentedControl: UIControl {
     public var selectedSegmentIndex = 0
     
     var stackView: UIStackView!
